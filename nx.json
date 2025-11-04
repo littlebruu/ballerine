@@ -3,13 +3,22 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "test", "test:unit", "test:integration", "test:e2e"]
+        "cacheableOperations": [
+          "build",
+          "test",
+          "test:unit",
+          "test:integration",
+          "test:e2e"
+        ],
+        "accessToken": "ZTc3OTk4MmUtNjJiZC00NjA5LTk3ZDQtYWM1ZDlmN2VjN2I3fHJlYWQtd3JpdGU="
       }
     }
   },
   "targetDefaults": {
     "build": {
-      "outputs": ["{projectRoot}/dist"],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
       "dependsOn": [
         {
           "target": "build",
@@ -18,19 +27,44 @@
       ]
     },
     "test": {
-      "dependsOn": [{ "projects": "self", "target": "build" }]
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
     },
     "test:unit": {
-      "dependsOn": [{ "projects": "self", "target": "build" }]
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
     },
     "test:integration": {
-      "dependsOn": [{ "projects": "self", "target": "build" }]
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
     },
     "test:e2e": {
-      "dependsOn": [{ "projects": "self", "target": "build" }]
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
     },
     "lint": {
-      "dependsOn": [{ "projects": "self", "target": "build" }]
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
     }
   },
   "defaultBase": "main"
